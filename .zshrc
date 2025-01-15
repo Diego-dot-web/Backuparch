@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # prompt_context(){}
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -116,12 +116,9 @@ export NVM_DIR="$HOME/.nvm"
 source <(fzf --zsh)
 
 # alias
-alias update="sudo pacman -Syu"
-alias install="sudo pacman -S"
-alias uninstall="sudo pacman -Rns"
-alias aurUpdate="yay -Syu"
-alias aurInstall="yay -S"
-alias aurUninstall="yay -Rns"
+alias update="sudo dnf upgrade"
+alias install="sudo dnf install -y"
+alias uninstall="sudo dnf remove"
 alias shdw="shutdown -h now"
 
 alias neofetch="~/neoScript.sh"
@@ -146,8 +143,10 @@ esac
 # pnpm end
 export DB_PW="diegos"
 
-export PATH=$PATH:$GOPATH/bin
-export GOPATH=$HOME/repositories
-export PATH=$PATH:$GOPATH/bin
 
-eval "$(starship init zsh)"
+# fnm
+FNM_PATH="/home/diego/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/diego/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
