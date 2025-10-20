@@ -26,3 +26,15 @@ vim.opt.smartindent = true
 vim.opt.undolevels = 10000
 vim.opt.mouse = 'a'
 vim.opt.conceallevel = 2
+vim.opt.ignorecase = true
+vim.opt.wildmode = 'longest:full,full'
+vim.opt.wrap = false
+vim.opt.termguicolors = true
+vim.opt.fillchars = {
+  foldopen = '',
+  foldclose = '',
+  fold = ' ',
+  foldsep = ' ',
+  diff = '╱',
+  eob = ' ',
+}

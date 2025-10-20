@@ -10,11 +10,11 @@ end)
 vim.keymap.set('n', ']d', function()
   vim.diagnostic.jump { count = 1, float = true }
 end)
-vim.keymap.set('n', '[d', function()
+vim.keymap.set('n', '[h', function()
   gitsigns.nav_hunk 'prev'
 end)
 
-vim.keymap.set('n', ']d', function()
+vim.keymap.set('n', ']h', function()
   gitsigns.nav_hunk 'next'
 end)
 vim.keymap.set('n', '<leader>fw', '<CMD>noautocmd w<CR>')
