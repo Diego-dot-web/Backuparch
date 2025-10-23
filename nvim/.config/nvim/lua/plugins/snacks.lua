@@ -31,9 +31,16 @@ return {
         end,
       },
       {
+        '<leader>fe',
+        function()
+          Snacks.picker.buffers { modified = true }
+        end,
+        desc = 'Find Config File',
+      },
+      {
         '<leader>fc',
         function()
-          Snacks.picker.files { cwd = vim.fn.stdpath 'config' }
+          Snacks.picker.files { cwd = vim.fn.stdpath 'config', hidden = true }
         end,
         desc = 'Find Config File',
       },
