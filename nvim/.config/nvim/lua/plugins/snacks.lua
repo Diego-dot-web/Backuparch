@@ -61,7 +61,7 @@ return {
       {
         '<leader>ff',
         function()
-          Snacks.picker.files()
+          Snacks.picker.files { hidden = true, ignored = true, exclude = { 'target', 'node_modules', '.angular' } }
         end,
         desc = 'Find Files',
       },
@@ -101,6 +101,13 @@ return {
       },
       {
         '<leader>sD',
+        function()
+          Snacks.picker.diagnostics()
+        end,
+        desc = 'Buffer Diagnostics',
+      },
+      {
+        '<leader>sd',
         function()
           Snacks.picker.diagnostics_buffer()
         end,

@@ -18,5 +18,5 @@ vim.keymap.set('n', ']h', function()
   gitsigns.nav_hunk 'next'
 end)
 vim.keymap.set('n', '<leader>fw', '<CMD>noautocmd w<CR>')
-vim.keymap.set({ 'n', 'v', 't', 'x' }, 'j', 'gj')
-vim.keymap.set({ 'n', 'v', 't', 'x' }, 'k', 'gk')
+vim.keymap.set({ 'n', 'v', 'x' }, 'j', 'gj')
+vim.keymap.set({ 'n', 'v', 'x' }, 'k', 'gk')
