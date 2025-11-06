@@ -160,6 +160,11 @@ return {
             }
           end)(),
         }
+        vim.lsp.config('angularls', {})
+        vim.lsp.enable 'angularls'
+
+        vim.lsp.config('vtsls', {})
+        vim.lsp.enable('vtsls')
       end
 
       local ensure_installed = vim.tbl_keys(servers or {})

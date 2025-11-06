@@ -33,7 +33,12 @@ return {
       {
         '<leader>fe',
         function()
-          Snacks.picker.buffers { modified = true }
+          Snacks.picker.buffers {
+            modified = true,
+            hidden = true,
+            ignored = true,
+            exclude = { 'target', 'node_modules', '.angular', 'bin' },
+          }
         end,
         desc = 'Find Config File',
       },
@@ -61,7 +66,7 @@ return {
       {
         '<leader>ff',
         function()
-          Snacks.picker.files { hidden = true, ignored = true, exclude = { 'target', 'node_modules', '.angular' } }
+          Snacks.picker.files { hidden = true, ignored = true, exclude = { 'target', 'node_modules', '.angular', 'bin' } }
         end,
         desc = 'Find Files',
       },
@@ -155,12 +160,6 @@ return {
           Snacks.picker.lsp_type_definitions()
         end,
         desc = 'Goto T[y]pe Definition',
-      },
-      {
-        '<leader>gg',
-        function()
-          Snacks.lazygit.open()
-        end,
       },
       {
         '<leader>ss',
