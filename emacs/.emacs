@@ -145,11 +145,11 @@
 (global-set-key (kbd "C-c h r") 'helm-recentf)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->")         'mc/mark-next-like-this)
-(global-set-key (kbd "C-<")         'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<")     'mc/mark-all-like-this)
-(global-set-key (kbd "C-\"")        'mc/skip-to-next-like-this)
-(global-set-key (kbd "C-:")         'mc/skip-to-previous-like-this)
+(global-set-key (kbd "C-n")         'mc/mark-next-like-this)
+(global-set-key (kbd "C-p")         'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-a")     'mc/mark-all-like-this)
+(global-set-key (kbd "C-s")        'mc/skip-to-next-like-this)
+(global-set-key (kbd "C-S-s")         'mc/skip-to-previous-like-this)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
