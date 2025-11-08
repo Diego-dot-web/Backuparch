@@ -17,6 +17,12 @@ vim.keymap.set('n', '<C-t>', '<cmd>tabnew<CR>')
 vim.keymap.set('n', '<leader>q', '<cmd>quit<CR>')
 vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>')
 
+vim.keymap.set('n', '<C-x><C-k>', '<cmd>bdelete<CR>')
+vim.keymap.set('n', '<C-x><C-n>', '<cmd>bnext<CR>')
+vim.keymap.set('n', '<C-x><C-p>', '<cmd>bprevious<CR>')
+vim.keymap.set('n', '<C-x><C-s>', '<cmd>write<CR>')
+vim.keymap.set('n', '<leader>,', 'yyp')
+
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')

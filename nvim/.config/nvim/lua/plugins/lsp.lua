@@ -164,8 +164,11 @@ return {
         vim.lsp.enable 'angularls'
 
         vim.lsp.config('vtsls', {})
-        vim.lsp.enable('vtsls')
+        vim.lsp.enable 'vtsls'
       end
+
+      vim.lsp.config('clangd', {})
+      vim.lsp.enable 'clangd'
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {

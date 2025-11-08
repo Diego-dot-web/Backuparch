@@ -64,7 +64,7 @@
 
 (ffap-bindings)
 
-(add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font-13"))
+(add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font-12"))
 
 (load "~/.emacs.rc/misc-rc.el")
 (load "~/.emacs.rc/rc.el")
@@ -145,10 +145,10 @@
 (global-set-key (kbd "C-c h r") 'helm-recentf)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C-n")         'mc/mark-next-like-this)
-(global-set-key (kbd "C-p")         'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-n")         'mc/mark-next-like-this)
+(global-set-key (kbd "C-c C-p")         'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-a")     'mc/mark-all-like-this)
-(global-set-key (kbd "C-s")        'mc/skip-to-next-like-this)
+(global-set-key (kbd "C-c C-s")        'mc/skip-to-next-like-this)
 (global-set-key (kbd "C-S-s")         'mc/skip-to-previous-like-this)
 
 (global-set-key (kbd "M-x") 'smex)
@@ -165,7 +165,8 @@
 (global-set-key (kbd "C-x C-a") 'beginning-of-buffer)
 (global-set-key (kbd "C-x C-e") 'end-of-buffer)
 (global-set-key (kbd "C-c g") 'magit-status)
-(global-set-key (kbd "C-c C-u") 'undo-tree-visualize)
+(global-set-key (kbd "C-c u") 'undo-tree-undo)
+(global-set-key (kbd "C-c r") 'undo-tree-redo)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 
