@@ -90,7 +90,11 @@
  'typescript-mode
  )
 (rc/require 'undo-tree)
+(rc/require 'diff-hl)
+(rc/require 'expand-region)
 
+(diff-hl-margin-mode 1)
+(global-diff-hl-mode 1)
 
 
 (yas-global-mode 1)
@@ -162,6 +166,9 @@
 (global-set-key (kbd "C-x C-e") 'end-of-buffer)
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "C-c C-u") 'undo-tree-visualize)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+
 
 (add-to-list 'compilation-error-regexp-alist
              '("\\([a-zA-Z0-9\\.]+\\)(\\([0-9]+\\)\\(,\\([0-9]+\\)\\)?) \\(Warning:\\)?"

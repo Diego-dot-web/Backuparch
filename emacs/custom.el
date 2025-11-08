@@ -11,10 +11,11 @@
      default))
  '(package-selected-packages
    '(cmake-mode corfu dash-functional diff-hl dockerfile-mode eglot
-                gruber-darker-theme helm helm-git-grep helm-ls-git
-                ido-completing-read+ lsp-java lsp-mode lua-mode
-                move-text multiple-cursors paredit smex tide toml-mode
-                typescript-mode undo-tree yaml-mode yasnippet)))
+                expand-region gruber-darker-theme helm helm-git-grep
+                helm-ls-git ido-completing-read+ lsp-java lsp-mode
+                lua-mode move-text multiple-cursors paredit smex tide
+                toml-mode typescript-mode undo-tree yaml-mode
+                yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
