@@ -89,9 +89,17 @@
  'toml-mode
  'typescript-mode
  )
+(rc/require 'undo-tree)
+
 
 
 (yas-global-mode 1)
+
+
+(set-display-table-slot standard-display-table 0 ?\ )
+
+(global-undo-tree-mode 1)
+
 
 (setq helm-ff-transformer-show-only-basename nil)
 
@@ -117,6 +125,7 @@
 
 (add-hook 'emacs-lisp-mode-hook  'rc/turn-on-paredit)
 (add-hook 'java-mode-hook  'rc/turn-on-paredit)
+(add-hook 'c-mode-hook  'rc/turn-on-paredit)
 
 (require 'ido-completing-read+)
 
@@ -152,6 +161,7 @@
 (global-set-key (kbd "C-x C-a") 'beginning-of-buffer)
 (global-set-key (kbd "C-x C-e") 'end-of-buffer)
 (global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "C-c C-u") 'undo-tree-visualize)
 
 (add-to-list 'compilation-error-regexp-alist
              '("\\([a-zA-Z0-9\\.]+\\)(\\([0-9]+\\)\\(,\\([0-9]+\\)\\)?) \\(Warning:\\)?"
