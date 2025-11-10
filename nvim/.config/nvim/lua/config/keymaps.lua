@@ -29,6 +29,10 @@ vim.keymap.set('n', '<C-a>', '0')
 vim.keymap.set('n', '<C-e>', '$')
 vim.keymap.set('i', '<C-a>', '<C-o>0')
 vim.keymap.set('i', '<C-e>', '<C-o>$')
+vim.keymap.set('c', '<C-a>', '<C-b>')
+vim.keymap.set({ 'c', 'i' }, '<C-f>', '<Right>')
+vim.keymap.set({ 'c', 'i' }, '<C-b>', '<Left>')
+
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
