@@ -170,6 +170,9 @@ return {
       vim.lsp.config('clangd', {})
       vim.lsp.enable 'clangd'
 
+      vim.lsp.config('gopls', {})
+      vim.lsp.enable 'gopls'
+
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua',

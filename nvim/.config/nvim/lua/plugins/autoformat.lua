@@ -23,6 +23,7 @@ return {
         lua = { 'stylua' },
         yaml = { 'prettierd', 'prettierd' },
         c = { 'clang-format' },
+        go = { 'goimports' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
