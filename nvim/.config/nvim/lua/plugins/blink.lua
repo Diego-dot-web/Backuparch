@@ -50,13 +50,36 @@ return {
         },
       },
 
-      snippets = { preset = 'luasnip' },
+      snippets = {
+        preset = 'luasnip',
+        active = function(filter)
+          local snippet = require 'luasnip'
+          local blink = require 'blink.cmp'
+          if snippet.in_snippet() and not blink.is_visible() then
+            return true
+          else
+            if not snippet.in_snippet() and vim.fn.mode() == 'n' then
+              snippet.unlink_current()
+            end
+            return false
+          end
+        end,
+      },
 
       -- See :h blink-cmp-config-fuzzy for more information
       fuzzy = { implementation = 'lua' },
 
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },
+
+      cmdline = {
+        keymap = { preset = 'inherit' },
+        completion = {
+          menu = {
+            auto_show = true,
+          },
+        },
+      },
     },
   },
 }
