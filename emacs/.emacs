@@ -18,7 +18,7 @@
     (let* ((home (getenv "HOME"))
            (lombok-path (concat home "/.config/nvim/lombok.jar"))
            (jdtls-cache (concat home "/.emacs.d/.cache/lsp/eclipse.jdt.ls"))
-           (launcher-jar (car (file-expand-wildcards
+           (launcher-jar (car (file-expand-wildcarcds
                                (concat jdtls-cache "/plugins/org.eclipse.equinox.launcher_*.jar"))))
            (config-dir (concat jdtls-cache "/config_linux"))
            (workspace (concat home "/.emacs.d/workspace/"
@@ -92,6 +92,12 @@
 (rc/require 'undo-tree)
 (rc/require 'diff-hl)
 (rc/require 'expand-region)
+(rc/require 'format-all)
+
+
+(add-hook 'java-mode-hook (lambda ()
+                            (setq format-all-formatters
+                                  '(("Java" (astyle "--mode=java"))))))
 
 (diff-hl-margin-mode 1)
 (global-diff-hl-mode 1)
