@@ -1,5 +1,6 @@
 return {
   { 'blazkowolf/gruber-darker.nvim' },
+  { 'rebelot/kanagawa.nvim' },
   {
     'vague-theme/vague.nvim',
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -9,7 +10,7 @@ return {
       require('vague').setup {
         -- optional configuration here
       }
-      vim.cmd 'colorscheme gruber-darker'
+      vim.cmd 'colorscheme kanagawa'
     end,
   },
 }

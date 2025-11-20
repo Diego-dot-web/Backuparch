@@ -9,9 +9,9 @@ vim.keymap.set('n', '<leader>wl', '<C-w><C-l>', { desc = 'Move focus to the righ
 vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '<S-h>', '<cmd>tabprevious<CR>')
-vim.keymap.set('n', '<S-l>', '<cmd>tabnext<CR>')
-vim.keymap.set('n', '<C-w>', '<cmd>tabclose<CR>')
+vim.keymap.set('n', '<S-h>', '<cmd>bprevious<CR>')
+vim.keymap.set('n', '<S-l>', '<cmd>bnext<CR>')
+vim.keymap.set('n', '<C-w>', '<cmd>bdelete<CR>')
 vim.keymap.set('n', '<C-t>', '<cmd>tabnew<CR>')
 
 vim.keymap.set('n', '<leader>q', '<cmd>quit<CR>')
@@ -73,6 +73,6 @@ vim.keymap.set('n', '<leader>fw', '<CMD>noautocmd w<CR>')
 vim.keymap.set({ 'n', 'v', 'x' }, 'j', 'gj')
 vim.keymap.set({ 'n', 'v', 'x' }, 'k', 'gk')
 
-vim.keymap.set('n', '<leader>gg', '<CMD>Neogit cwd=%:p:h<CR>')
-
-vim.keymap.set('n', '<leader>gc', '<CMD>Neogit cwd=~/Backuparch<CR>')
+-- vim.keymap.set('n', '<leader>gg', '<CMD>Neogit cwd=%:p:h<CR>')
+--
+-- vim.keymap.set('n', '<leader>gc', '<CMD>Neogit cwd=~/Backuparch<CR>')
